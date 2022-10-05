@@ -1,16 +1,11 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: mdoli
-  Date: 2022-10-04 0004
-  Time: 오후 9:47
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page session="false" %>
 <html>
 <head>
     <title>Welcome!</title>
 </head>
 <body>
   <h2>Hello HomePage</h2>
+  <P>  The time on the server is ${serverTime}. </P>
 </body>
 </html>

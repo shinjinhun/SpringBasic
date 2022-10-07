@@ -8,7 +8,7 @@
 </head>
 <body>
   <h2>Hello HomePage</h2>
-  <P>  The time on the server is ${serverTime}. </P>
-  <h2>reble 세팅</h2>
+  <P>The time on the server is ${serverTime}. </P>
+  <p>이름 : ${name}</p>
 </body>
 </html>

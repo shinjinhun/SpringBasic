@@ -3,13 +3,17 @@ package org.example.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.xml.sax.SAXException;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.xml.parsers.ParserConfigurationException;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.Enumeration;
 import java.util.Locale;
 import java.util.Set;
+
+
 
 @Controller
 public class HomeController {
@@ -21,6 +25,17 @@ public class HomeController {
 
     @RequestMapping("/home")
     public String showHomePage(Locale locale, Model model, HttpServletRequest request) {
+
+        MainMenu mainMenu = new MainMenu();
+
+        try {
+            System.out.println("main_menu_nm = " + mainMenu.main_menu());
+        } catch (ParserConfigurationException e) {
+            throw new RuntimeException(e);
+        } catch (SAXException e) {
+            throw new RuntimeException(e);
+        }
+
         Date date = new Date();
         DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
 

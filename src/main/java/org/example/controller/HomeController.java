@@ -1,5 +1,7 @@
 package org.example.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +20,16 @@ import java.util.Set;
 @Controller
 public class HomeController {
 
+    private final Logger logger = LoggerFactory.getLogger(this.getClass().getSimpleName());
+
+    public void log() {
+        logger.trace("Trace");
+        logger.debug("Debug");
+        logger.info("Info");
+        logger.warn("Warn");
+        logger.error("Error");
+    }
+
     @RequestMapping("/")
     public String showIndexPage() {
         return "index";
@@ -25,6 +37,8 @@ public class HomeController {
 
     @RequestMapping("/home")
     public String showHomePage(Locale locale, Model model, HttpServletRequest request) {
+
+        log();
 
         MainMenu mainMenu = new MainMenu();
 

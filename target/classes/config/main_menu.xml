@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<main_menu>
+    <main_menu_code code="M001">
+        <main_menu_nm>Tony</main_menu_nm>
+    </main_menu_code>
+    <main_menu_code code="M002">
+        <main_menu_nm>Amy</main_menu_nm>
+    </main_menu_code>
+</main_menu>
